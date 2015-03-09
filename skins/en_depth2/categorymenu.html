@@ -1,0 +1,72 @@
+<load target="css/default.css" />
+<load target="../../../../layouts/ydcloud/css/superfish.css" />
+<load target="../../../../layouts/ydcloud/css/superfish-vertical.css" />
+<load target="./js/script.js" />
+<load target="../../../../layouts/ydcloud/js/hoverIntent.js" />
+<load target="../../../../layouts/ydcloud/js/superfish.js" />
+
+{@$url_info=parse_url($current_url)}
+{@$query_string=htmlspecialchars($url_info['query'])}
+
+<block loop="$category_tree=>$key,$val">
+	<block cond="$key == $category">
+		{@$selected_node = $val}
+	</block>
+	<block loop="$val=>$key2,$val2">
+		<block cond="$key2 == $category">
+			{@$selected_node = $val2}
+		</block>
+		<block loop="$val2=>$key3,$val3">
+			<block cond="$key3 == $category">
+				{@$selected_node = $val3}
+			</block>
+			<block loop="$val3=>$key4,$val4">
+				<block cond="$key4 == $category">
+					{@$selected_node = $val4}
+				</block>
+				<block loop="$val4=>$key5,$val5">
+					<block cond="$key5 == $category">
+						{@$selected_node = $val5}
+					</block>
+				</block>
+			</block>
+		</block>
+	</block>
+</block>
+<div id="nurigo_sidebar_menu">
+	<div cond="($selected_menu && $selected_menu['list']) || count($category_index)" class="sub_menu">
+		<div>
+			<h2 cond="$selected_menu"><a href="{$selected_menu['href']}">{$selected_menu['text']}</a></h2>
+			<h2 cond="$category && $module_info->module=='nproduct'"><a href="{getUrl('','mid',$mid,'category',$category)}">{$category_index[$category]->category_name}</a></h2>
+			<ul class="sf-menu sf-vertical">
+				<li loop="$selected_node=>$key,$val" class="on"|cond="$category == $category_index[$key]->node_id">
+					<a href="{getUrl('','mid',$category_index[$key]->mid,'category',$category_index[$key]->node_id)}" alt="{$category_index[$key]->category_name}"><span class="url"></span>{$category_index[$key]->category_name}</a>
+					<ul cond="count($val)">
+						<li loop="$val=>$key2,$val2" class="on"|cond="$category == $category_index[$key2]->node_id">
+							<a href="{getUrl('','mid',$category_index[$key2]->mid,'category',$category_index[$key2]->node_id)}" alt="{$category_index[$key2]->category_name}"><span class="url"></span>{$category_index[$key2]->category_name}</a>
+							<ul cond="count($val2)">
+								<li loop="$val2=>$key3,$val3" class="on"|cond="$category==$category_index[$key3]->node_id">
+									<a href="{getUrl('','mid',$category_index[$key3]->mid,'category',$category_index[$key3]->node_id)}" alt="{$category_index[$key3]->category_name}"><span class="url"></span>{$category_index[$key3]->category_name}</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<block loop="$selected_menu['list']=>$key2,$val2">
+					{@$val2_url_info=parse_url($val2['href'])}
+					<li class="on"|cond="$val2['selected'] || ($val2_url_info['query']==$query_string)">
+						<a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'">{$val2['link']}</a>
+					</li>
+				</block>
+			</ul>
+		</div>
+	</div><!--end of sub_menu-->
+</div>
+<script>
+	jQuery(document).ready(function(){
+		jQuery('ul.sf-menu').superfish({
+			animation: {height:'show'},	// slide-down effect without fade-in
+			delay: 300			// 1.2 second delay on mouseout
+		});
+	});
+</script>

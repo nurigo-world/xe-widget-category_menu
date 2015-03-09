@@ -1,0 +1,19 @@
+#nurigo_sidebar_menu .sub_menu {position:relative; border:1px solid #b2b2b2; margin:5px 0;}
+#nurigo_sidebar_menu .sub_menu h2 {margin:0; padding:10px 15px; font-size:14px; font-weight:bold; color:#fff; background:#feb20e; position:relative; top:-1px; }
+#nurigo_sidebar_menu .sub_menu h2 a { color:#fff; text-decoration:none; }
+#nurigo_sidebar_menu .sub_menu ul {margin:0; padding:0;}
+#nurigo_sidebar_menu .sub_menu li {list-style:none; text-decoration:none; border-top:1px solid #fff; border-bottom:1px solid #b2b2b2; padding:0; } 
+#nurigo_sidebar_menu .sub_menu li:first-child { border-top:0; }
+#nurigo_sidebar_menu .sub_menu li:last-child { border-bottom:0; }
+#nurigo_sidebar_menu .sub_menu li.on a { font-weight:bold; color:#fd982d; }
+#nurigo_sidebar_menu .sub_menu li a { text-align:left; text-decoration:none; color:#555; font-size:13px; letter-spacing:-1px; line-height:2em; display:block; }
+#nurigo_sidebar_menu .sub_menu li a:hover,
+#nurigo_sidebar_menu .sub_menu li a:active,
+#nurigo_sidebar_menu .sub_menu li a:focus { text-decoration:none; color:#fd982d; }
+
+/* super fish */
+#nurigo_sidebar_menu .sub_menu .sf-vertical.sf-arrows > li > .sf-with-ul:after { border-color:transparent transparent transparent #777; }
+#nurigo_sidebar_menu .sub_menu .sf-arrows > li > .sf-with-ul:after { left:13em; }
+#nurigo_sidebar_menu .sub_menu .sf-arrows .sf-with-ul:after { left:8.5em; }
+#nurigo_sidebar_menu .sub_menu .sf-menu li { background:#fff; }
+#nurigo_sidebar_menu .sub_menu .sf-vertical { width:12.4em; }

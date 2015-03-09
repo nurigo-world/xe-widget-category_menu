@@ -1,0 +1,17 @@
+#nurigo_sidebar_menu .sub_menu {position:relative; border:1px solid #b2b2b2; margin:5px 0;}
+#nurigo_sidebar_menu .sub_menu h2 { margin:0; padding:10px 15px; font-size:14px; font-weight:bold; color:#fff; background: #feb20e; position:relative; top:-1px; }
+#nurigo_sidebar_menu .sub_menu ul {margin:0; padding:0;}
+#nurigo_sidebar_menu .sub_menu li {list-style:none; text-decoration:none; border-top:1px solid #fff; border-bottom:1px solid #b2b2b2; margin:0 5px; }
+#nurigo_sidebar_menu .sub_menu li:first-child { border-top:0; }
+#nurigo_sidebar_menu .sub_menu li:last-child { border-bottom:0; }
+#nurigo_sidebar_menu .sub_menu li.on a { font-weight:bold; color:#fd982d; }
+#nurigo_sidebar_menu .sub_menu li a {text-align:left; text-decoration:none; color:#555; font-size:13px; letter-spacing:-1px; padding:8px 10px; line-height:2em; display:block; }
+#nurigo_sidebar_menu .sub_menu li a:hover,
+#nurigo_sidebar_menu .sub_menu li a:active,
+#nurigo_sidebar_menu .sub_menu li a:focus { text-decoration:none; color:#fd982d; }
+
+.depth2 > li > a { font-weight:bold; color:#333 !important; border-bottom:1px solid #b2b2b2; }
+.depth2 > li > ul li { padding-left:0; }
+.depth2 > li:first-child > a { border-top:0; }
+.depth2 > li > ul li.on a { color:#fd982d !important; font-weight:bold; }
+.depth2 > li > ul li:last-child { border:0; }

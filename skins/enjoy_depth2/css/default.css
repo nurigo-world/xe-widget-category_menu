@@ -1,0 +1,10 @@
+#cympus_sidebar .cympus_submenu {position:relative; margin:5px 0; background:#4e4e4e; padding:5px 0 10px; }
+#cympus_sidebar .cympus_submenu h2 {margin:0; padding:10px 15px; font-size:14px; font-weight:bold; color:#feb20e; }
+#cympus_sidebar .cympus_submenu ul {margin:0; padding:0;}
+#cympus_sidebar .cympus_submenu li {list-style:none;text-align:center; text-decoration:none; }
+#cympus_sidebar .cympus_submenu li a .url { background:url(../img/left_arrow.png) no-repeat; width:9px; height:9px; display:inline-block; margin-right:6px; }
+#cympus_sidebar .cympus_submenu li.on a { background:#3d3d3d; font-weight:bold; }
+#cympus_sidebar .cympus_submenu li a {text-align:left; text-decoration:none; color:#ddd; font-size:13px; letter-spacing:-1px; padding:8px 25px; line-height:1.2em; display:block; }
+#cympus_sidebar .cympus_submenu li a:hover,
+#cympus_sidebar .cympus_submenu li a:active,
+#cympus_sidebar .cympus_submenu li a:focus { text-decoration:none; background:#3d3d3d; color:#fff; }
